@@ -5,7 +5,8 @@ import time
 import matplotlib.pyplot as plt
 
 def read():
-    file = open ('GOTOES_FIT-CSV_2595200649388790.csv')
+    filename = 'GOTOES_FIT-CSV_2595200649388790.csv'
+    file = open (filename)
     type(file)
     csvreader=csv.reader(file)
     header = next(csvreader)
