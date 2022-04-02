@@ -5,7 +5,7 @@ import time
 import matplotlib.pyplot as plt
 
 def read():
-    filename = 'GOTOES_FIT-CSV_2595200649388790.csv'
+    filename = 'GOTOES_FIT-CSV_8283289313858536.csv'
     file = open (filename)
     type(file)
     csvreader=csv.reader(file)
@@ -63,12 +63,14 @@ def carga(rows):
         #power
         if rows[i][9]=='':
             a[i,6] = 0 
-        if int(rows[i][9])==65535:
+        elif int(rows[i][9])==65535:
             a[i,6] = 0 
         else:
             a[i,6] = rows[i][9]
 
+    print(a[:,0])
     return a
+
 
 def plotear(a):
 
